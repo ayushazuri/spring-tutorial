@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	
+	<bean class="com.springcore.ci.Certi" name="cerRef">
+		<constructor-arg value="Java" />
+	</bean >
+	
+	<bean class="com.springcore.ci.Person" name="person">
+		<constructor-arg>
+			<value>Ayush Singh</value>
+		</constructor-arg>
+		
+		<constructor-arg value="2" type="int"/> 
+<!-- 		if you dont add type, then spring automatically figures it out with the help of the parameter in the constructor, or else it will take it as string. -->
+<!-- 		Here by default it can take it as a int because of constructor parameter. Usefull in case of multiple constructors. -->
+
+		<constructor-arg ref="cerRef"/>
+	</bean>
+	
+</beans>
