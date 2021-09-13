@@ -10,4 +10,5 @@
 6) use getBean(name) function of the context to get the bean and get the ready-made object with the help of bean in the config file without actually using the new keyword, thus achieving dependency injection.
 7) There are three ways of making a bean, by using property and value elements, by using value as an attribute in property element, by using property as an attribute in bean element with the help of "p" defined in beans explicitly.
 8) List, set, maps can also be injected with the help of spring, by using property, list and value element in the bean, or property, set, and value element, or property, map and entry(with attributes as key and value) elements.
-
+9) Autowiring maps injects object to object without having to use the beans and ref in xml. It can be done via xml as well as annotations. It automatically maps and injects the object to another object. It can inject primitive data types or string, only objects.	
+10) Autowiring in xml can be done via byName (name of the bean and object), byType (type/class of the bean and Reference type of the object) 
