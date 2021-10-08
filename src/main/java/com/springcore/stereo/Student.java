@@ -4,11 +4,14 @@ import java.util.HashSet;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component // This will make a bean without using xml. ID will be taken as the camelcase
 			// name of the class by default. This name can be used to access this bean
 //@Component("student1") //If you want to give another name to the bean or id, you can give the id as this also. Then use this id to get the bean.
+@Scope("prototype") // To change the scope from singelton to prototype. New object will be created
+					// everytime, unlike same obj being circulated
 public class Student {
 	@Value("Ayush Singh")
 	private String studentName;
